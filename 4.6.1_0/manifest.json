@@ -1,0 +1,30 @@
+{
+   "author": "Denny Ku",
+   "background": {
+      "persistent": false,
+      "scripts": [ "dist/eventPage-bundle.js", "./event.dev.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icon.png",
+      "default_popup": "popup.html"
+   },
+   "content_scripts": [ {
+      "js": [ "dist/content-bundle.js" ],
+      "matches": [ "*://www.104.com.tw/*", "*://104.com.tw/*", "*://www.1111.com.tw/*", "*://www.518.com.tw/*", "*://www.yes123.com.tw/*" ]
+   } ],
+   "content_security_policy": "script-src 'self' 'unsafe-eval' https://www.gstatic.com/ https://www.googleapis.com https://ssl.google-analytics.com https://connect.facebook.net https://localhost:8011 https://www.google.com; object-src 'self'",
+   "description": "讓你能在各大人力銀行上留言討論職缺，減少求職的資訊不對稱",
+   "icons": {
+      "128": "icon128.png",
+      "16": "icon16.png",
+      "48": "icon48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgh0GFrL6F2E0bDca0Svea4o7fy8dmMlQiBrkt4J3a9/dPKjYAoPvzw+zR8M5KOaObQ7DyxhU6SuaSYWE3Muq1SqK1smge4bLKupTwzowOqpsozHIg4+i7oiEttI5iKYGVIzJNjpQOeIo+OmCapnKwIlJSmzjb5ArTH/Z0l8Gsg5hSdMm2I/jQkcq1LfS5yaVVUudOqHM3lCgNMWlcB1UOeonm8FODPprSt/V7TZPMDfTFb2LQe3JU195MKErFsXMzFzvWhy4QcqhBwQZe8sHYn0BAasf1YJfHdwFhjBbm+/+tmyd13HAYrdH8+uv2V/dediNWOpaU2ytKwskej/GXQIDAQAB",
+   "manifest_version": 2,
+   "name": "Qollie - 求職天眼通",
+   "options_page": "options.html",
+   "permissions": [ "tabs", "storage", "activeTab", "https://ajax.googleapis.com/", "http://jobhelper.g0v.ronny.tw/", "https://jobhelper.g0v.ronny.tw/", "http://www.taiwanjobs.gov.tw/", "https://tranquil-fortress-92731.herokuapp.com/", "https://localhost:3011/", "http://localhost:8011/", "https://*/*", "http://*/*" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "4.6.1",
+   "web_accessible_resources": [ "loadDisqus.js", "dist/logo.png" ]
+}
